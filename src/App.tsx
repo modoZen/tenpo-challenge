@@ -1,10 +1,12 @@
+import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppRoutes } from './app-routes';
-import { Home } from './pages/Home';
-import { Login } from './pages/Login';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 
 import './App.css';
+
+const Home = lazy(() => import('./pages/Home'));
+const Login = lazy(() => import('./pages/Login'));
 
 const App = () => {
   return (
