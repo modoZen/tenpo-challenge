@@ -6,6 +6,7 @@ const lintConfig = {
   extends: [
     'airbnb',
     'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
@@ -31,7 +32,25 @@ const lintConfig = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
+    'import/prefer-default-export': 0,
+    'no-shadow': 0,
+    'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    ],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+      },
+    ],
+  },
 };
 
 module.exports = lintConfig;
