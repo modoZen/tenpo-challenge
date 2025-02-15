@@ -3,8 +3,6 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppRoutes } from './app-routes';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 
-import './App.css';
-
 const Home = lazy(() => import('./pages/Home'));
 const Login = lazy(() => import('./pages/Login'));
 

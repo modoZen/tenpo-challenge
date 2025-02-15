@@ -5,7 +5,7 @@ import App from './App';
 import { AppProvider } from './context/AppProvider';
 import { Loading } from './components/Loading/Loading';
 
-import './index.css';
+import './index.scss';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

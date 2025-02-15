@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #4361ee;
+  --hover-color: #3f37c9;
+  --background-color: #f8f9fa;
+  --text-color: #2b2d42;
+
+  --error-color: #d90429;
+  --disabled-color: #ced4da;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  --border-radius: 0.5rem;
+  --border-width: 2px;
+}
+
+body {
+  margin: 0;
+}

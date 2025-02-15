@@ -1,9 +1,3 @@
-$primary-color: #4361ee;
-$hover-color: #3f37c9;
-$background-color: #f8f9fa;
-$text-color: #2b2d42;
-$error-color: #d90429;
-
 .login-form-container {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -11,7 +5,7 @@ $error-color: #d90429;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: $background-color;
+  background-color: var(--background-color);
 
   form {
     background: white;
@@ -22,7 +16,7 @@ $error-color: #d90429;
     max-width: 400px;
 
     h1 {
-      color: $text-color;
+      color: var(--text-color);
       font-size: 2rem;
       margin-bottom: 2rem;
       text-align: center;
@@ -41,8 +35,8 @@ $error-color: #d90429;
       outline: none;
 
       &:focus {
-        border-color: $primary-color;
-        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
       }
 
       &::placeholder {
@@ -53,10 +47,10 @@ $error-color: #d90429;
     button {
       width: 100%;
       padding: 0.8rem;
-      background-color: $primary-color;
+      background-color: var(--primary-color);
       color: white;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: var(--border-radius);
       font-size: 1rem;
       font-weight: 500;
       cursor: pointer;
@@ -65,13 +59,13 @@ $error-color: #d90429;
       letter-spacing: 0.5px;
 
       &:hover:not(:disabled) {
-        background-color: $hover-color;
+        background-color: var(--hover-color);
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba($primary-color, 0.3);
+        box-shadow: 0 5px 15px rgba(var(--primary-color), 0.3);
       }
 
       &:disabled {
-        background-color: #ced4da;
+        background-color: var(--disabled-color);
         cursor: not-allowed;
         opacity: 0.7;
       }
