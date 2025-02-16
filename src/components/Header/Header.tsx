@@ -16,12 +16,14 @@ export const Header = () => {
   };
 
   return (
-    <header>
-      <h1>Tenpo Challenge</h1>
-      <div>
-        <button type='button' onClick={handleLogout}>
-          Salir
-        </button>
+    <header className='header'>
+      <div className='content'>
+        <h1 className='logo'>Wikidex</h1>
+        <div>
+          <button className='btn-logout' type='button' onClick={handleLogout}>
+            Salir
+          </button>
+        </div>
       </div>
     </header>
   );
