@@ -1,0 +1,12 @@
+.layout {
+  display: grid;
+  grid-template-rows: 4.625rem minmax(0, 1fr);
+  grid-template-columns: 100%;
+  min-height: 100vh;
+
+  main {
+    grid-row: 2;
+    min-height: calc(100vh - 4.625rem);
+    overflow-y: auto;
+  }
+}
