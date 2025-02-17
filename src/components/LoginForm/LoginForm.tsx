@@ -1,20 +1,22 @@
-import { FormEvent, useContext, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AppContext } from '../../context/AppContext';
+import { useAppDispatch } from '../../store';
+import { authThunks } from '../../store/authThunks';
 
 import './LoginForm.scss';
 
 export const LoginForm = () => {
-  const { login } = useContext(AppContext);
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const dispatch = useAppDispatch();
+
   const isDisabledButton = !email || !password;
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    login(email);
+    await dispatch(authThunks.login({ email, password }));
     navigate('/');
   };
 

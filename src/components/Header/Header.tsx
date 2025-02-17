@@ -1,16 +1,17 @@
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
+import { AppRoutes } from '../../app-routes';
+import { useAppDispatch } from '../../store';
+import { authThunks } from '../../store/authThunks';
 
 import './Header.scss';
 
 export const Header = () => {
   const navigate = useNavigate();
-  const { logout } = useContext(AppContext);
+  const dispatch = useAppDispatch();
 
   const handleLogout = () => {
-    logout();
-    navigate('/login', {
+    dispatch(authThunks.logout());
+    navigate(AppRoutes.Auth, {
       replace: true,
     });
   };
