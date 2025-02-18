@@ -1,10 +1,12 @@
 import { AnyAction, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { useSelector, TypedUseSelectorHook, useDispatch } from 'react-redux';
 import { authReducer } from './authSlice';
+import { pokemonReducer } from '../app/Home/store/pokemonSlice';
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    pokemon: pokemonReducer,
   },
 });
 
