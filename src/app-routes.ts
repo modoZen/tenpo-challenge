@@ -1,4 +1,4 @@
 export enum AppRoutes {
-  Auth = '/auth',
-  Home = '/',
+  Auth = 'auth',
+  Pokedex = '',
 }

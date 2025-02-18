@@ -1,5 +1,5 @@
-import { Pokemon } from '../domain/pokemon';
 import { PokemonRegion } from '../domain/pokemon-region.enum';
+import { Pokemon } from '../domain/pokemon';
 import { PokemonResponse } from '../domain/pokemon-response';
 
 const regionMap = [

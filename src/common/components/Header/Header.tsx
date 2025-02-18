@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { AppRoutes } from '../../app-routes';
-import { useAppDispatch } from '../../store';
-import { authThunks } from '../../store/authThunks';
+import { useAppDispatch } from '../../../store';
+import { AuthThunks } from '../../../app/Auth/store/authThunks';
+import { AppRoutes } from '../../../app-routes';
 
 import './Header.scss';
 
@@ -10,7 +10,7 @@ export const Header = () => {
   const dispatch = useAppDispatch();
 
   const handleLogout = () => {
-    dispatch(authThunks.logout());
+    dispatch(AuthThunks.logout());
     navigate(AppRoutes.Auth, {
       replace: true,
     });

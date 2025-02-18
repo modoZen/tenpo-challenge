@@ -1,4 +1,4 @@
-import { AppThunk } from '.';
+import { AppThunk } from '../../../store';
 import { checkingCredentials, login as startLogin, logout as startLogout } from './authSlice';
 
 const checkAuth = (): AppThunk => async (dispatch) => {
@@ -40,7 +40,7 @@ const logout = (): AppThunk => async (dispatch) => {
   dispatch(startLogout());
 };
 
-export const authThunks = {
+export const AuthThunks = {
   checkAuth,
   login,
   logout,

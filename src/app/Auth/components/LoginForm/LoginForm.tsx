@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../store';
-import { authThunks } from '../../store/authThunks';
+import { useAppDispatch } from '../../../../store';
+import { AuthThunks } from '../../store/authThunks';
 
 import './LoginForm.scss';
 
@@ -16,7 +16,7 @@ export const LoginForm = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await dispatch(authThunks.login({ email, password }));
+    await dispatch(AuthThunks.login({ email, password }));
     navigate('/');
   };
 

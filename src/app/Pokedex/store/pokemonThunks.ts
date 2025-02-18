@@ -1,5 +1,5 @@
 import { AppThunk } from '../../../store';
-import { PokeApi } from '../../../request/pokemonApi';
+import { PokeApi } from '../request/pokemonApi';
 import { setPokemons, setLoading } from './pokemonSlice';
 
 const fetchPokemons = (): AppThunk => async (dispatch) => {
