@@ -1,4 +1,4 @@
 export enum PokedexRoutes {
   Home = '',
-  Details = 'detials/:id',
+  Details = 'details/:id',
 }

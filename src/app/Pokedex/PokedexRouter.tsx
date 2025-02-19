@@ -7,7 +7,7 @@ const Home = lazy(() => import('./pages/Home'));
 const PokedexRouter = () => {
   return (
     <Routes>
-      <Route path={PokedexRoutes.Home} element={<Home />} />
+      <Route index element={<Home />} />
       <Route path={PokedexRoutes.Details} element={<div>En proceso...</div>} />
 
       <Route path='*' element={<Navigate to='/' replace />} />
