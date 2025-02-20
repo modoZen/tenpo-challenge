@@ -17,7 +17,11 @@ Utilice esta libreria para escrbir los estilos con una sintaxis más poderosa.
 
 ### Styled-components
 
-Utilice esta libreria para escrbir los estilos en codigo ts como parte de una migración.
+Utilice esta libreria para escrbir los estilos en codigo ts como parte de una migración
+
+### Jest
+
+Utilice esta libreria para escrbir realizar las pruebas unitarias..
 
 ## Scripts disponibles
 
@@ -26,7 +30,8 @@ Los comandos del proyecto son:
 ### `npm run dev`
 
 Ejecuta la aplicación en el modo de desarrollo.\
-Abra [http://localhost:5173](http://localhost:5173) para verlo en el navegador.
+Abra [http://localhost:5173](http://localhost:5173) para verlo en el navegador. En usuario y
+contraseña pueden ingresar cualquier valor.
 
 ### `npm run build`
 
