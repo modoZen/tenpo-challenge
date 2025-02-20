@@ -9,4 +9,8 @@ export const pokemonResultsStub: PokemonResponse['results'] = [
     name: 'Dragonite',
     url: 'https://pokeapi.co/api/v2/pokemon/149/',
   },
+  {
+    name: 'Gekkouga',
+    url: 'https://pokeapi.co/api/v2/pokemon/658/',
+  },
 ];

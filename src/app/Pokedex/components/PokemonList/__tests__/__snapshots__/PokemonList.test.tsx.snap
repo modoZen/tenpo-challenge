@@ -37,6 +37,11 @@ exports[`PokemonList matches snapshot with pokemons 1`] = `
     >
       Dragonite
     </div>
+    <div
+      data-testid="pokemon-card"
+    >
+      Gekkouga
+    </div>
   </div>
 </DocumentFragment>
 `;

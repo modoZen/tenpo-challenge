@@ -18,4 +18,12 @@ export const pokemonListStub: Pokemon[] = [
     region: PokemonRegion.Kanto,
     url: 'https://pokeapi.co/api/v2/pokemon/149/',
   },
+  {
+    id: 658,
+    name: 'Gekkouga',
+    image:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png',
+    region: PokemonRegion.Kalos,
+    url: 'https://pokeapi.co/api/v2/pokemon/658/',
+  },
 ];
