@@ -34,9 +34,14 @@ jest.mock('../../components/PokemonList/PokemonList', () => ({
 
 jest.mock('../../components/RegionFilter/RegionFilter', () => ({
   RegionFilter: ({ onSelectRegion }: { onSelectRegion: (region: PokemonRegion) => void }) => (
-    <button type='button' onClick={() => onSelectRegion(PokemonRegion.Kalos)}>
-      {PokemonRegion.Kalos}
-    </button>
+    <>
+      <button type='button' onClick={() => onSelectRegion(PokemonRegion.Kalos)}>
+        {PokemonRegion.Kalos}
+      </button>
+      <button type='button' onClick={() => onSelectRegion(PokemonRegion.Kanto)}>
+        {PokemonRegion.Kanto}
+      </button>
+    </>
   ),
 }));
 
@@ -83,19 +88,23 @@ describe('Home page', () => {
     },
   );
 
-  it('should render PokemonList with filtered pokemon when region is selected', async () => {
-    (useAppSelector as jest.Mock).mockReturnValue({
-      pokemons: pokemonListStub,
-      isLoading: false,
-    });
-    render(<Home />);
+  it.each([
+    [PokemonRegion.Kanto, 2],
+    [PokemonRegion.Kalos, 1],
+  ])(
+    'should render PokemonList with filtered pokemon when region is selected',
+    async (region, expectedCount) => {
+      (useAppSelector as jest.Mock).mockReturnValue({
+        pokemons: pokemonListStub,
+        isLoading: false,
+      });
+      render(<Home />);
 
-    const kalosButton = screen.getByRole('button', { name: PokemonRegion.Kalos });
+      const kalosButton = screen.getByRole('button', { name: region });
 
-    await user.click(kalosButton);
+      await user.click(kalosButton);
 
-    const filteredPokemons = pokemonListStub.filter(({ region }) => region === PokemonRegion.Kalos);
-
-    expect(screen.getAllByTestId('pokecard')).toHaveLength(filteredPokemons.length);
-  });
+      expect(screen.getAllByTestId('pokecard')).toHaveLength(expectedCount);
+    },
+  );
 });
