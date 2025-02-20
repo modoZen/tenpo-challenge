@@ -29,7 +29,7 @@ describe('RegionFilter', () => {
   });
 
   it.each(Object.values(PokemonRegion))(
-    'shoudl call onSelectRegion with correct region when button is clicked',
+    'should call onSelectRegion with correct region when button is clicked',
     async (region) => {
       render(
         <RegionFilter onSelectRegion={onSelectRegionMock} selectedRegion={PokemonRegion.Kanto} />,
